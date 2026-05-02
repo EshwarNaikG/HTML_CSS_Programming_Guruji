@@ -1,0 +1,236 @@
+:
+
+1. What is CSS?
+CSS (Cascading Style Sheets) is used to style HTML elements—colors, layouts, fonts, spacing, etc.
+
+🧱 Basic Syntax
+selector {
+  property: value;
+}
+
+Example:
+
+p {
+  color: blue;
+  font-size: 16px;
+}
+🔍 Types of CSS
+Inline CSS
+<p style="color:red;">Text</p>
+Internal CSS
+<style>
+  p { color: red; }
+</style>
+External CSS (best practice)
+<link rel="stylesheet" href="style.css">
+🎯 Selectors
+Element selector
+h1 { color: red; }
+Class selector
+.myClass { color: green; }
+ID selector
+#myId { color: blue; }
+Universal selector
+* { margin: 0; }
+Group selector
+h1, p { color: purple; }
+🎨 Colors & Background
+color: red;
+background-color: yellow;
+background-image: url("img.jpg");
+🔤 Fonts
+font-family: Arial;
+font-size: 20px;
+font-weight: bold;
+text-align: center;
+📦 Box Model
+
+Every element is a box:
+
+Margin → Border → Padding → Content
+div {
+  margin: 10px;
+  padding: 15px;
+  border: 2px solid black;
+}
+📐 Display & Position
+Display
+display: block;
+display: inline;
+display: flex;
+display: grid;
+Position
+position: static;
+position: relative;
+position: absolute;
+position: fixed;
+📏 Flexbox (Layout)
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+🧩 Grid (Layout)
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+🎬 Pseudo-classes
+a:hover {
+  color: red;
+}
+📱 Responsive Design
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+
+-------------------------------------------------------------------------------------------------------------
+🔹 CSS Interview Questions & Answers
+🟢 Basic Level
+1. What is CSS?
+
+CSS (Cascading Style Sheets) is used to style and layout web pages (colors, fonts, spacing, layout).
+
+2. Types of CSS
+Inline CSS
+Internal CSS
+External CSS ✅ (best practice)
+3. What is CSS Box Model?
+
+It consists of:
+
+Content
+Padding
+Border
+Margin
+4. Difference between class and id
+Class	ID
+.class	#id
+reusable	unique
+multiple elements	one element
+5. What is specificity?
+
+It decides which CSS rule is applied.
+
+Priority:
+
+Inline > ID > Class > Element
+🟡 Intermediate Level
+6. What is Flexbox?
+
+A layout system for 1D layouts (row or column).
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+7. What is Grid?
+
+A 2D layout system (rows + columns).
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+8. Difference: Flexbox vs Grid
+Flexbox	Grid
+1D layout	2D layout
+Row OR column	Row AND column
+9. What is position property?
+static (default)
+relative
+absolute
+fixed
+sticky
+10. What is z-index?
+
+Controls vertical stacking (which element is on top).
+
+11. What is display property?
+block
+inline
+inline-block
+none
+12. What is overflow?
+
+Controls content overflow:
+
+hidden
+scroll
+auto
+🔴 Advanced Level
+13. What is responsive design?
+
+Design that adapts to different screen sizes.
+
+14. What are media queries?
+@media (max-width: 768px) {
+  body {
+    background: red;
+  }
+}
+15. What is CSS preprocessors?
+
+Tools like:
+
+Sass
+Less
+
+They add features like variables, nesting.
+
+16. What is pseudo-class?
+
+Used for special states:
+
+a:hover {
+  color: red;
+}
+17. What is pseudo-element?
+
+Used for styling parts:
+
+p::first-letter {
+  font-size: 30px;
+}
+18. What is float and clear?
+float: moves element left/right
+clear: prevents floating
+19. What is object-fit?
+
+Used for images/videos:
+
+img {
+  object-fit: cover;
+}
+20. What is opacity?
+
+Controls transparency:
+
+opacity: 0.5;
+💀 Tricky / Interview-Favorite Questions
+21. Difference between inline-block and block
+block → full width
+inline-block → only content width
+22. Why use box-sizing: border-box?
+* {
+  box-sizing: border-box;
+}
+
+👉 Includes padding & border in width calculation.
+
+23. Difference between visibility:hidden and display:none
+visibility	display
+hidden but space kept	removed completely
+24. What is !important?
+
+Overrides all CSS rules ❗ (avoid using)
+
+25. How to center a div?
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
