@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 200cm;
+}
+
+div{
+    height: 2cm;
+    width: 80%;
+    text-align: center;
+    font-size: 40px;
+}
+.a{
+    background-color: yellow;
+}
+.b{
+    background-color: cyan;
+     /* position: relative;
+            top: 20px;
+            left: 20px; */
+    
+}
+.c{
+    background-color: magenta;
+        /* position: absolute;
+                top: 3cm; */
+
+    position:sticky;
+    top: 0;
+}
+.d{
+    background-color: lightgreen;
+}
