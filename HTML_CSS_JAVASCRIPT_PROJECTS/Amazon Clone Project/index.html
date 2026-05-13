@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Commerce Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>MyShop</h1>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search products...">
+    </div>
+
+    <div class="links">
+    <ul>
+      <li><a href="checkout.html" target="_blank">Checkout</a></li>
+      <li><a href="login.html" target="_blank">Login</a></li>
+    </ul>
+    </div>
+
+    <div class="cart-icon">
+      🛒 Cart: <span id="cart-count">0</span>
+    </div>
+  </nav>
+
+  <div class="filters">
+  <button onclick="filterProducts('All')">All</button>
+  <button onclick="filterProducts('Electronics')">Electronics</button>
+  <button onclick="filterProducts('Fashion')">Fashion</button>
+</div>
+  <!-- Products -->
+  <section class="products" id="product-list">
+
+  </section>
+
+  <!-- Cart -->
+  <div class="cart-container">
+    <h2>Shopping Cart</h2>
+
+    <ul id="cart-items"></ul>
+
+    <h3>Total: ₹<span id="cart-total">0</span></h3>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
