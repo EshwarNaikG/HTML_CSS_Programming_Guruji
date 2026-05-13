@@ -1,0 +1,404 @@
+CSS Notes (Basic → Advanced)
+1. What is CSS?
+
+CSS (Cascading Style Sheets) is used to style HTML elements.
+
+It controls:
+a. Colors
+b. Fonts
+c. Layouts
+d. Animations
+e. Responsive design
+
+--------------------------------------------------------------
+2. CSS Syntax
+selector {
+    property: value;
+}
+
+Example:
+
+h1 {
+    color: blue;
+    font-size: 40px;
+}
+
+--------------------------------------------------------------------
+3. Types of CSS
+
+1. Inline CSS
+<h1 style="color:red;">Hello</h1>
+------------------------------------------------------------
+2. Internal CSS
+
+<style>
+h1{
+   color: blue;
+}
+</style>
+
+-------------------------------------------------------------
+3. External CSS
+
+<link rel="stylesheet" href="style.css">
+---------------------------------------------------
+4. CSS Selectors
+
+Element Selector.........................
+p{
+   color:red;
+}
+
+Class Selector......................
+.box{
+   background:yellow;
+}
+
+ID Selector............................
+#title{
+   color:blue;
+}
+
+Universal Selector............................
+*{
+   margin:0;
+}
+
+Group Selector..................................
+h1,p,div{
+   color:green;
+}
+
+--------------------------------------------------------------------------
+5. Colors in CSS
+color: red;
+color: #ff0000;
+color: rgb(255,0,0);
+color: rgba(255,0,0,0.5);
+
+------------------------------------------------------------------------
+6. Background Properties
+
+background-color: yellow;
+background-image: url("image.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+--------------------------------------------------------------------------
+7. Text Properties
+
+color: blue;
+text-align: center;
+text-transform: uppercase;
+text-decoration: underline;
+letter-spacing: 2px;
+line-height: 30px;
+
+------------------------------------------------------------------------
+8. Font Properties
+
+font-family: Arial;
+font-size: 20px;
+font-weight: bold;
+font-style: italic;
+
+-------------------------------------------------------------------------
+9. Box Model
+7
+div{
+   width:200px;
+   padding:20px;
+   border:5px solid black;
+   margin:30px;
+}
+
+Box Model Parts:
+
+Content
+Padding
+Border
+Margin
+10. Border Properties
+border: 2px solid red;
+border-radius: 10px;
+11. Margin and Padding
+margin: 20px;
+padding: 20px;
+Shorthand
+margin: top right bottom left;
+padding: top right bottom left;
+12. Width & Height
+width: 300px;
+height: 200px;
+max-width: 100%;
+13. Display Property
+display: block;
+display: inline;
+display: inline-block;
+display: none;
+14. Position Property
+position: static;
+position: relative;
+position: absolute;
+position: fixed;
+position: sticky;
+
+Example:
+
+.box{
+   position:absolute;
+   top:50px;
+   left:100px;
+}
+15. Float Property
+float: left;
+float: right;
+clear: both;
+16. Flexbox
+8
+Container
+.container{
+   display:flex;
+}
+Main Properties
+justify-content: center;
+align-items: center;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 20px;
+Example
+.container{
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   height:100vh;
+}
+17. CSS Grid
+6
+.container{
+   display:grid;
+   grid-template-columns: repeat(3,1fr);
+   gap:20px;
+}
+18. Pseudo Classes
+button:hover{
+   background:red;
+}
+
+input:focus{
+   border:2px solid blue;
+}
+
+li:first-child{
+   color:red;
+}
+19. Pseudo Elements
+p::first-letter{
+   font-size:40px;
+}
+
+p::before{
+   content:"★";
+}
+20. CSS Units
+Absolute Units
+px
+cm
+mm
+Relative Units
+%
+em
+rem
+vh
+vw
+
+Example:
+
+font-size:2rem;
+width:50%;
+height:100vh;
+21. Overflow
+overflow:hidden;
+overflow:scroll;
+overflow:auto;
+22. Z-Index
+z-index: 10;
+
+Works with positioned elements.
+
+23. Opacity
+opacity:0.5;
+24. Transitions
+button{
+   transition:0.5s;
+}
+
+button:hover{
+   background:red;
+}
+25. Transform
+transform: rotate(45deg);
+transform: scale(1.2);
+transform: translateX(100px);
+26. Animations
+7
+@keyframes move{
+   from{
+      left:0;
+   }
+   to{
+      left:200px;
+   }
+}
+
+.box{
+   animation:move 2s infinite;
+}
+27. Media Queries (Responsive Design)
+@media(max-width:768px){
+   body{
+      background:red;
+   }
+}
+28. CSS Variables
+:root{
+   --main-color: blue;
+}
+
+h1{
+   color: var(--main-color);
+}
+29. Shadows
+box-shadow: 0 0 10px gray;
+text-shadow: 2px 2px 5px black;
+30. Gradient
+background: linear-gradient(red,blue);
+background: radial-gradient(circle,red,blue);
+31. Important Keyword
+color:red !important;
+32. Object Fit
+img{
+   width:300px;
+   height:300px;
+   object-fit:cover;
+}
+33. Cursor
+cursor:pointer;
+34. Responsive Images
+img{
+   max-width:100%;
+   height:auto;
+}
+35. CSS Best Practices
+
+✅ Use external CSS
+✅ Use meaningful class names
+✅ Avoid excessive !important
+✅ Use Flexbox/Grid
+✅ Write responsive code
+✅ Keep code clean and reusable
+
+36. Mini Interview Questions
+Q1. Difference between ID and Class?
+ID	Class
+Unique	Reusable
+#id	.class
+Q2. Difference between Flexbox and Grid?
+Flexbox	Grid
+1D Layout	2D Layout
+Row OR Column	Rows AND Columns
+Q3. What is Box Model?
+
+Content + Padding + Border + Margin
+
+Q4. Difference between Relative and Absolute?
+Relative → moves from original position
+Absolute → moves relative to parent
+37. Complete Example
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{
+   margin:0;
+   font-family:Arial;
+}
+
+.container{
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   height:100vh;
+}
+
+.card{
+   width:300px;
+   padding:20px;
+   border-radius:10px;
+   box-shadow:0 0 10px gray;
+   transition:0.5s;
+}
+
+.card:hover{
+   transform:scale(1.05);
+}
+
+button{
+   padding:10px 20px;
+   border:none;
+   background:blue;
+   color:white;
+   cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+<h1>CSS Card</h1>
+<p>Learning CSS is fun.</p>
+<button>Click</button>
+</div>
+
+</div>
+
+</body>
+</html>
+38. Advanced Topics to Learn Next
+CSS Architecture
+BEM Methodology
+Tailwind CSS
+SASS/SCSS
+CSS Frameworks
+Advanced Animations
+Glassmorphism
+Neumorphism
+CSS Clip Path
+CSS Variables Advanced
+CSS Custom Properties
+CSS Container Queries
+39. CSS Learning Roadmap
+Beginner
+Selectors
+Colors
+Fonts
+Box Model
+Margin/Padding
+Intermediate
+Flexbox
+Grid
+Position
+Responsive Design
+Animations
+Advanced
+Complex Layouts
+SCSS
+Tailwind
+CSS Architecture
+Performance Optimization

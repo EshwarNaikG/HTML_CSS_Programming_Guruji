@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    
+}
+
+.a{
+    background-color: yellow;
+    width: 50%;
+    float: left;
+    
+}
+.b{
+    background-color: aqua;
+    width: 50%;
+    float: right;
+}
+
+.c{
+    background-color: lightblue;
+    clear: both;
+}
+
+.d{
+    background-color: darkgreen;
+}
