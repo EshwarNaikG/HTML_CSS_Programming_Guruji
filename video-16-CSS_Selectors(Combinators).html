@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators </title>
+    <style>
+        /* div p means all p elements that are children of div */
+        .a> p{
+            background-color: yellow;
+        }
+
+        .b >p{
+            background-color: cyan;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        /* ul li means all li elements that are descendants of ul */
+       ul li{
+            background-color: green;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* h1 + p means the first p element that is immediately after h1 */
+        /* Adjacent sibling combinator */
+        h1 + p{
+            background-color: pink;
+        }
+
+        /* h2~p means all p elements that are siblings of h2 and come after it */
+        /* General sibling combinator */
+        h2~p{
+            background-color: darkblue;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Descendant combinator (space)</li>
+        <li>Child combinator (>)</li>
+        <li>Adjacent sibling combinator (+)</li>
+        <li>General sibling combinator (~)</li>
+    </ul>
+
+
+    <!-- div is a parent element for paragraphs -->
+    <div class="a"> 
+        Container 1
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <div class="b">
+            <p>new paragraph</p>
+        </div>
+        <p>Paragraph 3</p>
+    </div>
+    <p>Paragraph 4</p>
+    <p>Paragraph 5</p>
+    <p>Paragraph 6</p>
+
+    <h1>First heading</h1>
+    <p>Paragraph 7</p>
+    <p>Paragraph 8</p>
+    <p>Paragraph 9</p>
+
+    <h2>Second heading</h2>
+    <p>Paragraph 10</p>
+    <p>Paragraph 11</p>
+    <p>Paragraph 12</p>
+</body>
+</html>
